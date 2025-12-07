@@ -3,6 +3,7 @@ package com.example.FirstSpringBoot;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
@@ -47,7 +48,7 @@ public class TodoController {
             if (todo.getStatus() != null && !todo.getStatus().trim().isEmpty()) {
                 existingTodo.setStatus(todo.getStatus());
             }
-            Todo savedTodo = todoRepository.save(existingTodo);
+            Todo savedTodo = java.util.Objects.requireNonNull(todoRepository.save(existingTodo));
             return savedTodo;
         }).orElseThrow(() -> new RuntimeException("Todo not found with id: " + id));
     }

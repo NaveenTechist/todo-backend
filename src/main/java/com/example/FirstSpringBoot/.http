@@ -19,9 +19,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 
 {
-  "title": "Grocery Shopping",
-  "description": "Buy vegetables, fruits, and snacks",
-  "status": "pending"
+  "title": "Learn Spring Boot",
+  "description": "Finish CRUD operations with security",
+  "status": "Pending",
+  "completed": false
 }
 
 
@@ -30,14 +31,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 ### PUT: Update product at index 1
 PUT http://localhost:8080/todos/3
-
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJieXN2Z2t4cHp5d3Vpa3RxZ3JnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ5OTk0OTMsImV4cCI6MjA4MDU3NTQ5M30.4RNT_mndOKv9ecieks4Ebi-V3urqg_pwEI-PqbK6NaE
 
 
 {
   "title": "Read Innovation Articles",
-  "description": "Check trending AI/automation tools and tutorials",
+  "description": "Check trending AI/automation tools",
   "status": "Completed",
   "completed": true
 }
@@ -45,5 +45,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 
 
+
 ### DELETE: Delete product at index 0
-DELETE http://localhost:8080/todos/4
+DELETE http://localhost:8080/todos/6
